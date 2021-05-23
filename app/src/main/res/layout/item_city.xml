@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="city"
+            type="com.visma.technical.domain.model.City" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="14dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{city.name}"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Alava"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/city_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{city.temperature.max}"
+            android:padding="10dp"
+            app:layout_constraintStart_toEndOf="@id/city_name"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="23"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/city_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{city.temperature.min}"
+            android:padding="10dp"
+            app:layout_constraintStart_toEndOf="@id/city_max"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="23"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

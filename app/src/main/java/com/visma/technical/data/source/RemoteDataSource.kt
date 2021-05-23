@@ -10,5 +10,5 @@ interface RemoteDataSource {
 
     suspend fun getCurrentWeather(lat: String, lng: String): CurrentWeatherDomain
     suspend fun getProvinces(): ProvincesDomain
-    suspend fun getProvinceData(): ProvinceDataDomain
+    suspend fun getProvinceData(id: String): ProvinceDataDomain
 }

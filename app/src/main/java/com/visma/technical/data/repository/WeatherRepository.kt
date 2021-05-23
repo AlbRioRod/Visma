@@ -18,8 +18,8 @@ class WeatherRepository @Inject constructor(
         return weatherDataSource.getProvinces()
     }
 
-    suspend fun getProvinceData(): ProvinceDataDomain {
-        return weatherDataSource.getProvinceData()
+    suspend fun getProvinceData(id: String): ProvinceDataDomain {
+        return weatherDataSource.getProvinceData(id)
     }
 
 

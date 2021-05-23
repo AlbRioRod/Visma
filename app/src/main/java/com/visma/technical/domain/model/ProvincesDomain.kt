@@ -5,6 +5,6 @@ data class ProvincesDomain(
 )
 
 data class ProvinceDomain(
-    var id: String,
+    val id: String,
     var name: String
 )

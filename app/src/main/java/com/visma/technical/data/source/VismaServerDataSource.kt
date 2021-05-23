@@ -40,11 +40,11 @@ class VismaServerDataSource @Inject constructor(
             ProvincesDomain(listOf())
         }
 
-    override suspend fun getProvinceData(): ProvinceDataDomain =
+    override suspend fun getProvinceData(id: String): ProvinceDataDomain =
 
         try {
 
-            val response = provincesService.province("v")
+            val response = provincesService.province(id)
 
             response.body()?.toDomain()!!
 

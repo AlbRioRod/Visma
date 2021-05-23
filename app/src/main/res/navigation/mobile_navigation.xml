@@ -9,20 +9,29 @@
     <fragment
         android:id="@+id/currentFragment"
         android:name="com.visma.technical.ui.current.CurrentWeatherFragment"
-        tools:layout="@layout/fragment_current_weather"/>
+        tools:layout="@layout/fragment_current_weather" />
 
 
     <fragment
         android:id="@+id/provincesFragment"
         android:name="com.visma.technical.ui.province.ProvincesFragment"
-        tools:layout="@layout/fragment_provinces"
-        />
+        tools:layout="@layout/fragment_provinces">
+
+
+    </fragment>
 
 
     <fragment
         android:id="@+id/provinceDetailFragment"
-        android:name="com.visma.technical.ui.ProvinceDetailFragment"
-        tools:layout="@layout/fragment_province_detail"
-        />
+        android:name="com.visma.technical.ui.province.ProvincesFragment"
+        tools:layout="@layout/fragment_province_detail">
+
+
+    </fragment>
+
+
+    <action
+        android:id="@+id/toDetailFragment"
+        app:destination="@id/provinceDetailFragment" />
 
 </navigation>

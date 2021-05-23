@@ -9,8 +9,8 @@ import javax.inject.Singleton
 @Singleton
 class GetProvinceData @Inject constructor(private val weatherRepository: WeatherRepository) {
 
-    suspend fun invoke(): ProvinceDataDomain =
+    suspend fun invoke(id: String): ProvinceDataDomain =
 
-        weatherRepository.getProvinceData()
+        weatherRepository.getProvinceData(id)
 
 }

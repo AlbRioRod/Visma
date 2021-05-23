@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="province"
+            type="com.visma.technical.domain.model.ProvinceDomain" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="14dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{province.name}"
+            app:layout_constraintStart_toEndOf="@id/province_id"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Alava"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/province_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{province.id}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="01"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

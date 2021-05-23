@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/currentFragment">
+
+
+    <fragment
+        android:id="@+id/currentFragment"
+        android:name="com.visma.technical.ui.current.CurrentWeatherFragment"
+        tools:layout="@layout/fragment_current_weather"/>
+
+
+    <fragment
+        android:id="@+id/provincesFragment"
+        android:name="com.visma.technical.ui.province.ProvincesFragment"
+        tools:layout="@layout/fragment_provinces"
+        />
+
+
+    <fragment
+        android:id="@+id/provinceDetailFragment"
+        android:name="com.visma.technical.ui.ProvinceDetailFragment"
+        tools:layout="@layout/fragment_province_detail"
+        />
+
+</navigation>
